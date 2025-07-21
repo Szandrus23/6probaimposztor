@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ki az Imposztor?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <h1>Ki az Imposztor?</h1>
+
+    <div id="player-setup">
+      <label for="playerCount">Játékosok száma (3-10):</label>
+      <input type="number" id="playerCount" min="3" max="10" />
+      <button onclick="setupPlayers()">Tovább</button>
+    </div>
+
+    <div id="name-setup" class="hidden">
+      <h2>Írd be a játékosok nevét:</h2>
+      <div id="nameInputs"></div>
+      <button onclick="startGame()">Játék kezdése</button>
+    </div>
+
+    <div id="gameplay" class="hidden">
+      <h2 id="currentPlayerName"></h2>
+      <p id="wordToShow"></p>
+      <button onclick="nextPlayer()">Következő játékos</button>
+    </div>
+
+    <div id="reveal" class="hidden">
+      <h2>Ki az Imposztor?</h2>
+      <ul id="revealList"></ul>
+      <button onclick="restartGame()">Új játék</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
